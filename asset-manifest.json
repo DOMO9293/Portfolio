@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.956f4170.chunk.css",
-    "main.js": "/static/js/main.00abdd2a.chunk.js",
-    "main.js.map": "/static/js/main.00abdd2a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7e4b9196.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7e4b9196.js.map",
-    "static/js/2.95dd6c3c.chunk.js": "/static/js/2.95dd6c3c.chunk.js",
-    "static/js/2.95dd6c3c.chunk.js.map": "/static/js/2.95dd6c3c.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.bdf6f4f598c50e4fa22323e2369c423e.js": "/precache-manifest.bdf6f4f598c50e4fa22323e2369c423e.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.956f4170.chunk.css.map": "/static/css/main.956f4170.chunk.css.map",
-    "static/js/2.95dd6c3c.chunk.js.LICENSE.txt": "/static/js/2.95dd6c3c.chunk.js.LICENSE.txt",
-    "static/media/bold.blob": "/static/media/bold.8432a448.blob",
-    "static/media/brum.png": "/static/media/brum.631abf05.png",
-    "static/media/foodo1.png": "/static/media/foodo1.77af7a33.png",
-    "static/media/foto.jpeg": "/static/media/foto.0da6632d.jpeg",
-    "static/media/virusweb.png": "/static/media/virusweb.a7cfe2f8.png"
+    "main.css": "/portfolio/static/css/main.956f4170.chunk.css",
+    "main.js": "/portfolio/static/js/main.37386189.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.37386189.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.f4f2abbf.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.f4f2abbf.js.map",
+    "static/js/2.874f214c.chunk.js": "/portfolio/static/js/2.874f214c.chunk.js",
+    "static/js/2.874f214c.chunk.js.map": "/portfolio/static/js/2.874f214c.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.050f1100b7358494cc3bf4ef9f0134ad.js": "/portfolio/precache-manifest.050f1100b7358494cc3bf4ef9f0134ad.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.956f4170.chunk.css.map": "/portfolio/static/css/main.956f4170.chunk.css.map",
+    "static/js/2.874f214c.chunk.js.LICENSE.txt": "/portfolio/static/js/2.874f214c.chunk.js.LICENSE.txt",
+    "static/media/bold.blob": "/portfolio/static/media/bold.8432a448.blob",
+    "static/media/brum.png": "/portfolio/static/media/brum.631abf05.png",
+    "static/media/foodo1.png": "/portfolio/static/media/foodo1.77af7a33.png",
+    "static/media/foto.jpeg": "/portfolio/static/media/foto.0da6632d.jpeg",
+    "static/media/virusweb.png": "/portfolio/static/media/virusweb.a7cfe2f8.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7e4b9196.js",
-    "static/js/2.95dd6c3c.chunk.js",
+    "static/js/runtime-main.f4f2abbf.js",
+    "static/js/2.874f214c.chunk.js",
     "static/css/main.956f4170.chunk.css",
-    "static/js/main.00abdd2a.chunk.js"
+    "static/js/main.37386189.chunk.js"
   ]
 }
