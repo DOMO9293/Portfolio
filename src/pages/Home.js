@@ -38,7 +38,7 @@ const Home = () => {
           </Text>
         </Suspense>
       </Canvas>
-      {clicked && <Redirect to="/work" />}
+      {clicked && <Redirect to="/portfolio/work" />}
     </>
   );
 };
