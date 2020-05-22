@@ -11,11 +11,10 @@ function App() {
       <GlobalStyles />
 
       <Switch>
-        <Route exact path="/" render={(props) => <Home />} />
-        <Route path="/work" component={Work} />
-        <Route path="/details/:index" component={Details} />
+        <Route exact path="/portfolio" render={(props) => <Home />} />
+        <Route path="portfolio/work" component={Work} />
+        <Route path="portfolio/details/:index" component={Details} />
       </Switch>
-      <Nav />
     </>
   );
 }
