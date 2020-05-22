@@ -12,8 +12,8 @@ function App() {
 
       <Switch>
         <Route exact path="/portfolio" render={(props) => <Home />} />
-        <Route path="portfolio/work" component={Work} />
-        <Route path="portfolio/details/:index" component={Details} />
+        <Route path="/portfolio/work" component={Work} />
+        <Route path="/portfolio/details/:index" component={Details} />
       </Switch>
     </>
   );
