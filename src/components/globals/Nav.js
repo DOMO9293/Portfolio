@@ -32,8 +32,8 @@ const StyledNav = styled.nav`
   left: 2%;
   font-size: 1.2em;
   text-decoration: none;
-  display: inline;
-
+  /*   display: inline;
+ */
   ul li {
     list-style: none;
     float: left;
