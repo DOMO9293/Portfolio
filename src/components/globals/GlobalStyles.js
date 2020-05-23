@@ -2,10 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { setColor, setFont } from "../../styles";
 
 const Globals = createGlobalStyle`
-/*  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap'); */
- /* :root{
-   --color:red;
- } */
+
 *{
   margin:0;
   padding:0;
