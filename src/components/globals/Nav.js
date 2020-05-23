@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Nav = ({ className }) => {
   return (
-    <nav className={className}>
+    <StyledNav>
       <ul>
         <li>
           <Link className={"text-link"} to="/about">
@@ -22,16 +22,18 @@ const Nav = ({ className }) => {
       <Link className={"right"} to="/">
         home
       </Link>
-    </nav>
+    </StyledNav>
   );
 };
 
-const StyledNav = styled(Nav)`
+const StyledNav = styled.nav`
   position: absolute;
   top: 2%;
   left: 2%;
   font-size: 1.2em;
   text-decoration: none;
+  display: inline;
+
   ul li {
     list-style: none;
     float: left;
@@ -54,4 +56,4 @@ const StyledNav = styled(Nav)`
   }
 `;
 
-export default StyledNav;
+export default Nav;

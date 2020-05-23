@@ -133,7 +133,7 @@ export default function Work() {
     }
   };
   return (
-    <>
+    <React.Fragment>
       <Canvas
         concurrent
         pixelRatio={1}
@@ -152,7 +152,7 @@ export default function Work() {
         ))}
       </div>
       {redirect[0] && <Redirect to={`/details/${redirect[1]}`} />}
-    </>
+    </React.Fragment>
   );
 }
 

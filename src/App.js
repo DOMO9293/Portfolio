@@ -15,6 +15,7 @@ function App() {
         <Route path="/portfolio/work" component={Work} />
         <Route path="/portfolio/details/:index" component={Details} />
       </Switch>
+      <Nav />
     </>
   );
 }
