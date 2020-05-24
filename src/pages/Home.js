@@ -1,18 +1,21 @@
-import React, {
-  Suspense,
-  useRef,
-  useCallback,
-  useState,
-  useEffect,
-} from "react";
+import React, { Suspense, useRef, useCallback, useState } from "react";
 import Header from "../components/home/Header";
 import Sphere from "../components/home/Sphere";
 import { Text } from "../components/Work/Text";
 import { Canvas, Dom } from "react-three-fiber";
+import styled from "styled-components";
 import { setColor } from "../styles";
 
 import { Redirect } from "react-router-dom";
 
+const Info = styled.div`
+  position: absolute;
+  display: inline;
+  color: ${setColor.blue};
+  top: 93%;
+  left: 45%;
+  text-align: center;
+`;
 const Home = () => {
   const mouse = useRef([0, 0]);
   const [clicked, setClicked] = useState(false);
@@ -27,6 +30,7 @@ const Home = () => {
 
   return (
     <>
+      <Info>click anywhere!</Info>
       <Canvas
         camera={{ position: [0, 0, 200] }}
         shadowMap
@@ -49,6 +53,7 @@ const Home = () => {
           </Text>
         </Suspense>
       </Canvas>
+
       {moveto && <Redirect to="/portfolio/work" />}
     </>
   );

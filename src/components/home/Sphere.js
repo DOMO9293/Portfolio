@@ -66,8 +66,8 @@ function Circles({ mouse, clicked }) {
         if (clicked) {
           //line.position.x += 0.5;
           j % 2 === 0
-            ? (line.position.y += j * 0.1)
-            : (line.position.y -= j * 0.1);
+            ? (line.position.y += j * 0.2)
+            : (line.position.y -= j * 0.2);
 
           //line.position.z += 0.5;
         }
