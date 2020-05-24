@@ -1,19 +1,10 @@
-import React, { Suspense, useEffect, useRef, useMemo, useState } from "react";
-import {
-  Canvas,
-  Dom,
-  useLoader,
-  useFrame,
-  extend,
-  useThree,
-} from "react-three-fiber";
-import { TextureLoader, LinearFilter } from "three";
-import lerp from "lerp";
-import { Text, MultilineText } from "../components/Work/Text";
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import { Canvas } from "react-three-fiber";
+
+import { Text } from "../components/Work/Text";
 import { Block, useBlock } from "../components/Work/Container";
 import state from "../components/globals/store";
 import styled from "styled-components";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { setColor } from "../styles";
 import Plane from "../components/Work/Plane";
 import { Redirect } from "react-router-dom";
@@ -28,7 +19,6 @@ function Paragraph({ index, offset, factor, header, aspect, text, image }) {
   const pixelWidth = w * state.zoom * size;
   const left = !(index % 2);
   console.log(left);
-  const color = setColor.mainGrey;
 
   return (
     <Block factor={factor} offset={offset}>

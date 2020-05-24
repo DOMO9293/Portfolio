@@ -1,13 +1,11 @@
 import { FontLoader, Vector3, TextBufferGeometry } from "three";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useRef } from "react";
 import { useLoader, useFrame } from "react-three-fiber";
 import usePromise from "react-promise-suspense";
 import lerp from "lerp";
 import state from "../globals/store";
 import { setColor } from "../../styles";
 import bold from "./bold.blob";
-import { useSprings, a } from "react-spring/three";
-import { Redirect } from "react-router-dom";
 
 function Text({
   children,
@@ -63,11 +61,6 @@ function Text({
     last = state.top.current;
   });
 
-  const [movetoNext, setMovetonext] = useState(false);
-  /* const main = useSprings({
-    size: movetoNext ? 20 : 40,
-    rotation: movetoNext ? [0, 0, 0] : [0, 0, 45],
-  }); */
   const onClick = (e) => {
     if (index === 99) {
       console.log("yes!!");
@@ -77,7 +70,7 @@ function Text({
 
   return (
     <>
-      <a.group {...props} scale={[size, size, 0.1]} onClick={onClick}>
+      <group {...props} scale={[size, size, 0.1]} onClick={onClick}>
         <mesh
           geometry={geom}
           onUpdate={onUpdate}
@@ -87,7 +80,7 @@ function Text({
         >
           <meshBasicMaterial ref={ref} attach="material" color={color} />
         </mesh>
-      </a.group>
+      </group>
     </>
   );
 }

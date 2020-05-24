@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { setFlex } from "../../styles";
 import { setColor } from "../../styles";
 
 const Header = ({ className }) => {

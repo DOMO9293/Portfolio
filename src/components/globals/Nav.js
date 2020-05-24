@@ -19,7 +19,7 @@ const Nav = ({ className }) => {
         </li>
         <li>contact</li>
       </ul>
-      <Link className={"right"} to="/">
+      <Link className={"right"} to="/portfolio">
         home1
       </Link>
     </StyledNav>

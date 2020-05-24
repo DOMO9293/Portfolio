@@ -1,13 +1,6 @@
 import * as THREE from "three";
-import React, {
-  Suspens,
-  useEffect,
-  useRef,
-  useMemo,
-  useState,
-  useCallback,
-} from "react";
-import { Canvas, useFrame, useThree, extend } from "react-three-fiber";
+import React, { useRef } from "react";
+import { useFrame, useThree, extend } from "react-three-fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as perlin from "./perlin";
 import { setColor } from "../../styles";
@@ -27,8 +20,8 @@ function Circle() {
     let index = j;
     let geometry = new THREE.Geometry();
     geometry.y = (index / linesAmount) * radius * 2;
-    for (var i = 0; i <= verticesAmount; i++) {
-      var vector = new THREE.Vector3();
+    for (let i = 0; i <= verticesAmount; i++) {
+      let vector = new THREE.Vector3();
       vector.x = Math.cos((i / verticesAmount) * Math.PI * 2);
       vector.z = Math.sin((i / verticesAmount) * Math.PI * 2);
       vector._o = vector.clone();
@@ -46,7 +39,7 @@ function Circle() {
   });
 }
 
-function Circles({ mouse }) {
+function Circles({ mouse, clicked }) {
   let ref = useRef();
   let rate = 0;
   const { size, viewport } = useThree();
@@ -69,6 +62,14 @@ function Circles({ mouse }) {
             ) * 3;
           vector.copy(vector._o); //?
           vector.multiplyScalar(100 + ratio);
+        }
+        if (clicked) {
+          //line.position.x += 0.5;
+          j % 2 === 0
+            ? (line.position.y += j * 0.1)
+            : (line.position.y -= j * 0.1);
+
+          //line.position.z += 0.5;
         }
         line.geometry.verticesNeedUpdate = true;
       }

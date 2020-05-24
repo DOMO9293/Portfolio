@@ -1,14 +1,10 @@
-import { TextureLoader, Vector3, TextBufferGeometry } from "three";
-import React, { useCallback, useRef, forwardRef } from "react";
+import { TextureLoader } from "three";
+import React, { useRef, forwardRef } from "react";
 import { useLoader, useFrame } from "react-three-fiber";
-import usePromise from "react-promise-suspense";
 import lerp from "lerp";
 import state from "../globals/store";
 import { useBlock } from "./Container";
 import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLightUniformsLib";
-
-import { setColor } from "../../styles";
-import foto from "./foto.jpeg";
 
 RectAreaLightUniformsLib.init();
 const Plane = forwardRef(
