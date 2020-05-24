@@ -54,7 +54,7 @@ const Home = () => {
         </Suspense>
       </Canvas>
 
-      {moveto && <Redirect to="/portfolio/work" />}
+      {moveto && <Redirect to="/work" />}
     </>
   );
 };
