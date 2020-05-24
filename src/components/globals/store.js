@@ -16,6 +16,7 @@ const state = {
       aspect: 1.1,
       text:
         "errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router",
+      repo: "https://github.com/DOMO9293/Brum-client",
     },
     {
       offset: 1,
@@ -25,6 +26,7 @@ const state = {
       aspect: 1.7,
       text:
         "Applications that report only race-related issues, react, hook, three.js, react-three-fiber, ",
+      repo: "https://github.com/DOMO9293/Brum-client",
     },
     {
       offset: 2,
@@ -33,6 +35,7 @@ const state = {
       image: foodo,
       aspect: 1.7,
       text: "Grocery Shopping List App, react, react-router, chart.js, jwt",
+      repo: "https://github.com/DOMO9293/Brum-client",
     },
   ],
   stripes: [

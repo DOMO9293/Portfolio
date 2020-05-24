@@ -1,8 +1,10 @@
 import React from "react";
-import store from "../components/globals/store";
+import state from "../components/globals/store";
 
 const Details = ({ match }) => {
-  return <div>{match.params.index}</div>;
+  console.log("gg", match.params.index);
+  let str = state.paragraphs[parseInt(match.params.index)].repo;
+  return <div>{str}</div>;
 };
 
 export default Details;

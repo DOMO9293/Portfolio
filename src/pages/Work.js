@@ -12,13 +12,21 @@ import { HTML } from "drei";
 
 //import cursor from "../components/Work/circles.png"
 
-function Paragraph({ index, offset, factor, header, aspect, text, image }) {
+function Paragraph({
+  index,
+  offset,
+  factor,
+  header,
+  aspect,
+  text,
+  image,
+  repo,
+}) {
   const { contentMaxWidth: w, canvasWidth, margin, mobile } = useBlock();
   const size = aspect < 1 && !mobile ? 0.65 : 1;
   const alignRight = (canvasWidth - w * size - margin) / 2;
   const pixelWidth = w * state.zoom * size;
   const left = !(index % 2);
-  console.log(left);
 
   return (
     <Block factor={factor} offset={offset}>
@@ -90,7 +98,7 @@ function Paragraph({ index, offset, factor, header, aspect, text, image }) {
               -10,
             ]}
           >
-            repo
+            details
           </Text>
         </Block>
       </group>
@@ -115,12 +123,10 @@ export default function Work() {
   const scrollArea = useRef();
   const onScroll = (e) => (state.top.current = e.target.scrollTop);
   useEffect(() => void onScroll({ target: scrollArea.current }), []);
-  const onClick = (e) => {
+  const onClick = (e, index) => {
     //setIndex(index);
-    console.log(e.target.id);
-    if (e.target.id !== "00") {
-      setRedirect([true, e.target.id]);
-    }
+
+    setRedirect([true, index]);
   };
   return (
     <React.Fragment>
@@ -138,10 +144,14 @@ export default function Work() {
       </Canvas>
       <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
         {new Array(state.sections).fill().map((_, index) => (
-          <Section key={index} id={"0" + index} onClick={onClick} />
+          <Section
+            key={index}
+            id={"0" + index}
+            onClick={(e) => onClick(e, index)}
+          />
         ))}
       </div>
-      {redirect[0] && <Redirect to={`/details/${redirect[1]}`} />}
+      {redirect[0] && <Redirect to={`/portfolio/details/${redirect[1]}`} />}
     </React.Fragment>
   );
 }
