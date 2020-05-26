@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { setColor } from "../../styles";
 import { Link } from "react-router-dom";
 
-const Nav = ({ className }) => {
+const Nav = () => {
   return (
     <StyledNav>
       <ul>
@@ -19,7 +19,7 @@ const Nav = ({ className }) => {
         </li>
         <li>contact</li>
       </ul>
-      <Link className={"right"} to="/portfolio">
+      <Link className={"right"} to="/">
         home1
       </Link>
     </StyledNav>

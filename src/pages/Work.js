@@ -151,7 +151,7 @@ export default function Work() {
           />
         ))}
       </div>
-      {redirect[0] && <Redirect to={`/portfolio/details/${redirect[1]}`} />}
+      {redirect[0] && <Redirect to={`/details/${redirect[1]}`} />}
     </React.Fragment>
   );
 }

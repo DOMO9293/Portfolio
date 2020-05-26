@@ -2,6 +2,9 @@ import { createRef } from "react";
 import brum from "../Work/brum.png";
 import foodo from "../Work/foodo1.png";
 import virus from "../Work/virusweb.png";
+import brum1 from "../images/brum/home.png";
+import brum2 from "../images/brum/chat.png";
+import brum3 from "../images/brum/orderDetail.png";
 
 const state = {
   sections: 3,
@@ -17,6 +20,11 @@ const state = {
       text:
         "errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router",
       repo: "https://github.com/DOMO9293/Brum-client",
+      details: [brum1, brum2, brum3],
+      detailedtext: [
+        ` errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router`,
+        "",
+      ],
     },
     {
       offset: 1,
@@ -27,6 +35,9 @@ const state = {
       text:
         "Applications that report only race-related issues, react, hook, three.js, react-three-fiber, ",
       repo: "https://github.com/DOMO9293/Brum-client",
+      details: [brum1, brum2, brum3],
+      detailedtext:
+        "errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router",
     },
     {
       offset: 2,
@@ -36,6 +47,9 @@ const state = {
       aspect: 1.7,
       text: "Grocery Shopping List App, react, react-router, chart.js, jwt",
       repo: "https://github.com/DOMO9293/Brum-client",
+      details: [brum1, brum2, brum3],
+      detailedtext:
+        "errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router",
     },
   ],
   stripes: [
