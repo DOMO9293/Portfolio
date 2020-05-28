@@ -20,7 +20,7 @@ const Nav = () => {
         <li>contact</li>
       </ul>
       <Link className={"right"} to="/">
-        home1
+        home
       </Link>
     </StyledNav>
   );

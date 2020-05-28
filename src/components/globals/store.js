@@ -5,7 +5,7 @@ import virus from "../Work/virusweb.png";
 import brum1 from "../images/brum/home.png";
 import brum2 from "../images/brum/chat.png";
 import brum3 from "../images/brum/orderDetail.png";
-
+import brumvid from "../images/brum/brum.mp4";
 const state = {
   sections: 3,
   pages: 3,
@@ -18,13 +18,18 @@ const state = {
       image: brum,
       aspect: 1.1,
       text:
-        "errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router",
+        "errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-navigator",
       repo: "https://github.com/DOMO9293/Brum-client",
       details: [brum1, brum2, brum3],
-      detailedtext: [
-        ` errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router`,
-        "",
-      ],
+      description: {
+        about:
+          "Collaborative Project with the Company “2Luck” based in korea. The platform providing errand services within universities.",
+        tech:
+          "react-native,expo,redux,hook,jwt,react-navigator,styled-components",
+        resource: "https://github.com/DOMO9293/Brum-clien",
+        dist: "100",
+      },
+      vid: brumvid,
     },
     {
       offset: 1,
@@ -36,8 +41,15 @@ const state = {
         "Applications that report only race-related issues, react, hook, three.js, react-three-fiber, ",
       repo: "https://github.com/DOMO9293/Brum-client",
       details: [brum1, brum2, brum3],
-      detailedtext:
-        "errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router",
+      description: {
+        about:
+          "Collaborative Project with the Company “2Luck” based in korea. The platform providing errand services within universities.",
+        tech:
+          "react-native,expo,redux,hook,jwt,react-navigator,styled-components",
+        resource: "https://github.com/DOMO9293/Brum-clien",
+        dist: "100",
+      },
+      vid: brumvid,
     },
     {
       offset: 2,
@@ -48,8 +60,15 @@ const state = {
       text: "Grocery Shopping List App, react, react-router, chart.js, jwt",
       repo: "https://github.com/DOMO9293/Brum-client",
       details: [brum1, brum2, brum3],
-      detailedtext:
-        "errand service application, react-native,expo, styled-components,redux,hooks,jwt,react-router",
+      description: {
+        about:
+          "Collaborative Project with the Company “2Luck” based in korea. The platform providing errand services within universities.",
+        tech:
+          "react-native,expo,redux,hook,jwt,react-navigator,styled-components",
+        resource: "https://github.com/DOMO9293/Brum-clien",
+        dist: "100",
+      },
+      vid: brumvid,
     },
   ],
   stripes: [
