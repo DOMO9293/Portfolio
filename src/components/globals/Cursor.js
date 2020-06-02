@@ -20,8 +20,10 @@ function Cursor() {
   const cursorpos = useRef();
   const onMove = (e) => {
     const { clientX: x, clientY: y } = e;
-    cursorpos.current.style.left = x + "px";
-    cursorpos.current.style.top = y + "px";
+    if (cursorpos.current) {
+      cursorpos.current.style.left = x + "px";
+      cursorpos.current.style.top = y + "px";
+    }
   };
   useEffect(() => {
     window.addEventListener("pointermove", onMove);

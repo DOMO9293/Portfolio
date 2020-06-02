@@ -1,43 +1,11 @@
-import * as THREE from "three";
 import React, { useRef } from "react";
 import { useFrame, useThree, extend } from "react-three-fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import * as perlin from "./perlin";
-import { setColor } from "../../styles";
+import * as perlin from "../globals/perlin";
 import lerp from "lerp";
+import Circle from "../globals/Circle";
 
 extend({ OrbitControls });
-
-function Circle() {
-  var linesAmount = 4;
-  var radius = 100;
-  var verticesAmount = 100;
-
-  return new Array(linesAmount).fill().map((d, j) => {
-    let material = new THREE.LineBasicMaterial({
-      color: setColor[Object.keys(setColor)[j]],
-    });
-    let index = j;
-    let geometry = new THREE.Geometry();
-    geometry.y = (index / linesAmount) * radius * 2;
-    for (let i = 0; i <= verticesAmount; i++) {
-      let vector = new THREE.Vector3();
-      vector.x = Math.cos((i / verticesAmount) * Math.PI * 2);
-      vector.z = Math.sin((i / verticesAmount) * Math.PI * 2);
-      vector._o = vector.clone();
-      geometry.vertices.push(vector);
-    }
-    return (
-      <line
-        key={j}
-        userData={{ verticesAmount: 100 }}
-        geometry={geometry}
-        material={material}
-        position={[j, j, j]}
-      />
-    );
-  });
-}
 
 function Circles({ mouse, clicked }) {
   let ref = useRef();
@@ -70,6 +38,7 @@ function Circles({ mouse, clicked }) {
             : (line.position.y -= j * 0.2);
 
           //line.position.z += 0.5;
+          //여기 lerp 이용해서 바꿀 수 있을 듯
         }
         line.geometry.verticesNeedUpdate = true;
       }
