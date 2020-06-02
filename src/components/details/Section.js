@@ -18,9 +18,11 @@ const Gallery = styled.div`
   place-items: center center;
   grid-gap: 1em;
   max-width: 90%;
+  max-height: 90%;
+  overflow: scroll;
   img {
     max-width: 100%;
-    height: auto;
+    max-height: 90%;
   }
 `;
 

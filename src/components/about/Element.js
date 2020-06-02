@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
-import { useFrame, useThree, extend } from "react-three-fiber";
+import React, { useRef } from "react";
+import { useFrame } from "react-three-fiber";
 import * as perlin from "../globals/perlin";
 import Circle from "../globals/Circle";
 

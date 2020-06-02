@@ -71,10 +71,26 @@ const state = {
       vid: brumvid,
     },
   ],
-  stripes: [
-    { offset: 0, color: "#000", height: 13 },
-    { offset: 6.3, color: "#000", height: 20 },
-  ],
+  about: {
+    whoami: `I'm Jaesook Jeong. A Korean front-end Developer, currently living in Germany.
+    I have serious passion for UI effects, animations dynamic user experiences.`,
+    promo: "Fill free to contact me!",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "Javascript",
+      "React",
+      "Redux",
+      "hook",
+      "React-native",
+      "Node.js",
+      "mysql",
+      "express",
+      "styled-components",
+    ],
+    contact: ["email: flqjsl@gmail.com", "github: https://github.com/DOMO9293"],
+  },
+
   top: createRef(),
 };
 

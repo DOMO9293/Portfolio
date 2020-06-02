@@ -1,12 +1,21 @@
 import React from "react";
-import styled from "styled-components";
-
+import styled, { css } from "styled-components";
 const StyledText = styled.div`
-  color: red;
+  color: ${(props) => props.color};
+  position: absolute;
+  top: ${(props) => props.top}vh;
+  left: ${(props) => props.left}vw;
+  font-weight: ${(props) => (props.isbold ? "700" : "200")};
+  max-width: 400px;
+  transform: translate(-50%, -50%);
 `;
 
-function AboutText() {
-  return <StyledText>hehehehehe</StyledText>;
+function AboutText({ children, isbold, top, left, color }) {
+  return (
+    <StyledText top={top} left={left} isbold={isbold} color={color}>
+      {children}
+    </StyledText>
+  );
 }
 
 export default AboutText;
