@@ -19,7 +19,6 @@ function App() {
           <Route path="/details/:index" component={Details} />
         </Switch>
         <Nav />
-        <Cursor />
       </HashRouter>
     </>
   );

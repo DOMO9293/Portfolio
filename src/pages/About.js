@@ -1,9 +1,8 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Element from "../components/about/Element";
 import AboutText from "../components/about/AboutText";
 import state from "../components/globals/store";
-import { Canvas, Dom } from "react-three-fiber";
-import styled, { css } from "styled-components";
+import { Canvas } from "react-three-fiber";
 import { setColor } from "../styles";
 
 function Parahps({ isbold }) {

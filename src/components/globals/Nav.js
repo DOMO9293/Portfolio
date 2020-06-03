@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { setColor } from "../../styles";
 import { Link } from "react-router-dom";
+import Cursor from "../globals/Cursor";
 
 const Nav = () => {
   return (
@@ -17,11 +18,17 @@ const Nav = () => {
             work
           </Link>
         </li>
-        <li>contact</li>
+        <li>
+          {" "}
+          <Link className={"text-link"} to="/work">
+            contact
+          </Link>
+        </li>
       </ul>
-      <Link className={"right"} to="/">
+      <Link className={"right text-link"} to="/">
         home
       </Link>
+      <Cursor className="cursor" />
     </StyledNav>
   );
 };
@@ -32,6 +39,7 @@ const StyledNav = styled.nav`
   left: 2%;
   font-size: 1.2em;
   text-decoration: none;
+  text-align: center;
   /*   display: inline;
  */
   ul li {
@@ -51,8 +59,18 @@ const StyledNav = styled.nav`
     color: "white";
     left: 91vw;
   }
-  ul li:hover {
-    text-decoration: underline;
+
+  .text-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: ${setColor.mainGrey};
+    transition: width 0.3s;
+  }
+  .text-link:hover::after {
+    width: 100%;
+    transition: width 0.3s;
   }
 `;
 
