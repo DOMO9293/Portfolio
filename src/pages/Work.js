@@ -98,7 +98,7 @@ function Paragraph({
               -10,
             ]}
           >
-            details
+            click!
           </Text>
         </Block>
       </group>
