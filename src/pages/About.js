@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { TweenMax } from "gsap";
 import Element from "../components/about/Element";
 import AboutText from "../components/about/AboutText";
 import state from "../components/globals/store";
@@ -6,13 +7,17 @@ import { Canvas } from "react-three-fiber";
 import { setColor } from "../styles";
 
 function Parahps({ isbold }) {
+  let app = useRef(null);
   let whami = state.about.whoami;
   let promo = state.about.promo;
   let skills = state.about.skills;
   let contacts = state.about.contact;
 
+  useEffect(() => {
+    console.log(app);
+  });
   return (
-    <>
+    <div ref={(el) => (app = el)}>
       <AboutText isbold top={15} left={37} color={setColor.blue}>
         Who am I?
       </AboutText>
@@ -39,7 +44,7 @@ function Parahps({ isbold }) {
           ))}
         </ul>
       </AboutText>
-    </>
+    </div>
   );
 }
 function About() {
