@@ -20,9 +20,14 @@ const Nav = () => {
         </li>
         <li>
           {" "}
-          <Link className={"text-link"} to="/work">
+          <div
+            className={"text-link"}
+            onClick={() =>
+              window.open("https://www.linkedin.com/in/jaesook-jeong-7499b71aa")
+            }
+          >
             contact
-          </Link>
+          </div>
         </li>
       </ul>
       <Link className={"right text-link"} to="/">

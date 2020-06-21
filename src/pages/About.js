@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import { TweenMax } from "gsap";
 import Element from "../components/about/Element";
 import AboutText from "../components/about/AboutText";
 import state from "../components/globals/store";
 import { Canvas } from "react-three-fiber";
 import { setColor } from "../styles";
+import styled from "styled-components";
 
 function Parahps({ isbold }) {
   let app = useRef(null);
@@ -17,17 +17,17 @@ function Parahps({ isbold }) {
     console.log(app);
   });
   return (
-    <div ref={(el) => (app = el)}>
-      <AboutText isbold top={15} left={37} color={setColor.blue}>
+    <div ref={app}>
+      <AboutText isbold top={18} left={35} color={setColor.blue}>
         Who am I?
       </AboutText>
-      <AboutText top={30} left={38} color={setColor.blue}>
+      <AboutText top={33} left={35} color={setColor.blue}>
         {whami}
       </AboutText>
       <AboutText isbold top={15} left={65} color={setColor.pink}>
         Skills
       </AboutText>
-      <AboutText top={29} left={63} color={setColor.pink}>
+      <AboutText top={31} left={67} color={setColor.pink}>
         <ul>
           {skills.map((skill, i) => (
             <li key={i}>{skill}</li>
@@ -37,7 +37,7 @@ function Parahps({ isbold }) {
       <AboutText isbold top={73} left={35} color={setColor.primaryColor}>
         {promo}
       </AboutText>
-      <AboutText top={73} left={64} color={setColor.mainGrey}>
+      <AboutText top={73} left={67} color={setColor.mainGrey}>
         <ul>
           {contacts.map((c, i) => (
             <li key={i}>{c}</li>
@@ -62,3 +62,5 @@ function About() {
 }
 
 export default About;
+
+const Wrapper = styled.div``;

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import React, { useRef, useEffect } from "react";
 import { TweenMax, TimelineLite, Power3 } from "gsap";
 
@@ -6,8 +6,8 @@ const StyledText = styled.div`
   visibility: hidden;
   color: ${(props) => props.color};
   position: absolute;
-  top: ${(props) => props.top}vh;
-  left: ${(props) => props.left}vw;
+  top: ${(props) => props.top}%;
+  left: ${(props) => props.left}%;
   font-weight: ${(props) => (props.isbold ? "700" : "200")};
   max-width: 400px;
   transform: translate(-50%, -50%);
